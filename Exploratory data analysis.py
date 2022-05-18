@@ -60,8 +60,21 @@ data = sns.load_dataset("D:\heart.csv")
 # class v / s fare barplot
 sns.barplot(x='age', y='trtbps', data=data)
 
-# Show the plot
+# BOx plot
 plt.show()
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# load the dataset
+data = pd.read_csv("D:\heart.csv")
+
+# display 5 rows of dataset
+data.head()
+data.boxplot(by ='age', column =['trtbps'], grid = False)
+plt.show(data)
+
 
 #correlation
 import numpy as np
