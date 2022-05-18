@@ -103,3 +103,13 @@ plt.scatter(x, y)
 plt.plot(x, mymodel)
 plt.show()
 
+from sklearn import linear_model
+import pandas as pd
+data =pd.read_csv("D:\heart.csv")
+X = data[['age']]
+y = data['trtbps']
+
+regr = linear_model.LinearRegression()
+regr.fit(X, y)
+print(regr.coef_)
+
